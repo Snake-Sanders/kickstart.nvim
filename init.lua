@@ -720,6 +720,16 @@ require('lazy').setup({
           },
           capabilities = capabilities,
         },
+
+        -- Rust
+        -- to enable rust-analyzer settings visit:
+        -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+        rust_analyzer = {
+          -- enable clippy on save
+          checkOnSave = {
+            command = 'clippy',
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
